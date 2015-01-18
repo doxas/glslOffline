@@ -15,7 +15,6 @@ window.onload = function(){
 	});
 	editor.getSession().setUseSoftTabs(false);
 	bid('editor').style.fontSize = '14px';
-	setEditorSource();
 	var runButton = bid('bStart');
 	runButton.addEventListener('click', init, true);
 	var stopButton = bid('bStop');
@@ -24,16 +23,6 @@ window.onload = function(){
 	win.addEventListener('keydown', keydown, true);
 	editor.focus();
 };
-
-function setEditorSource(){
-	var fSource = decodeURIComponent(window.location.hash);
-	fSource = fSource.slice(1).replace(/\r/, '');
-	if(fSource && editor.getValue() !== fSource){
-		editor.setValue(fSource);
-		editor.gotoLine(1);
-		init();
-	}
-}
 
 function init(){
 	var e, k;
