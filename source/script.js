@@ -14,7 +14,7 @@ window.onload = function(){
 		bid('htmlCount').textContent = editor.getValue().length + 1256;
 	});
 	editor.getSession().setUseSoftTabs(false);
-	bid('editor').style.fontSize = '14px';
+	bid('editor').style.fontSize = '15px';
 	var runButton = bid('bStart');
 	runButton.addEventListener('click', init, true);
 	var stopButton = bid('bStop');
